@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import './App.css'
+import Title from './Title'
+import Button from './Button'
+import Count from './Count'
 
 class App extends Component {
   state = { karma: 0 };
@@ -8,14 +11,17 @@ class App extends Component {
   render () {
     return (
       <div>
-        <h1>karmakarma</h1>
-        <div>
-        <button onClick={this.commit(1)}>+1</button>
-        </div>
-        <div>{this.state.karma}</div>
-        <div>
-        <button onClick={this.commit(-1)}>-1</button>
-        </div>
+        <Title>karmakarma</Title>
+        <Button
+          onClick={this.commit(1)}
+          color='blue'
+        />
+        <Count>{this.state.karma}</Count>
+        <Button
+          reverse
+          onClick={this.commit(-1)}
+          color='red'
+        />
       </div>
     )
   }
