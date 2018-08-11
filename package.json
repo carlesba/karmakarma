@@ -25,5 +25,8 @@
       "Firefox ESR",
       "not ie < 11"
     ]
+  },
+  "devDependencies": {
+    "babel-plugin-module-resolver": "^3.1.1"
   }
 }
