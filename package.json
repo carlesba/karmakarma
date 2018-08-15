@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "pop": "^0.0.33",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-pose": "^2.2.1",
     "react-scripts-parcel": "0.0.24",
     "styled-components": "^3.4.2"
   },

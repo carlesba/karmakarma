@@ -15,7 +15,9 @@ class App extends Component {
           onClick={this.commit(1)}
           color='#333'
         />
-        <CountDisplay count={this.state.karma} />
+        <div style={{height: '50vh', position: 'relative'}}>
+          <CountDisplay count={this.state.karma} />
+        </div>
         <Button
           reverse
           onClick={this.commit(-1)}

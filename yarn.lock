@@ -138,6 +138,14 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
+"@types/invariant@^2.2.29":
+  version "2.2.29"
+  resolved "https://registry.yarnpkg.com/@types/invariant/-/invariant-2.2.29.tgz#aa845204cd0a289f65d47e0de63a6a815e30cc66"
+
+"@types/node@^10.0.5":
+  version "10.7.0"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.7.0.tgz#d384b2c8625414ab2aa18fdf989c288d6a7a8202"
+
 abab@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
@@ -2795,6 +2803,10 @@ fragment-cache@^0.2.1:
   dependencies:
     map-cache "^0.2.2"
 
+framesync@^3.1.8, framesync@^3.1.9:
+  version "3.1.9"
+  resolved "https://registry.yarnpkg.com/framesync/-/framesync-3.1.9.tgz#f65f815c711cf876f343b1f63da6e18b1384172f"
+
 fresh@0.5.2:
   version "0.5.2"
   resolved "https://registry.yarnpkg.com/fresh/-/fresh-0.5.2.tgz#3d8cadd90d976569fa835ab1f8e4b23a105605a7"
@@ -3088,6 +3100,10 @@ hash.js@^1.0.0, hash.js@^1.0.3:
 hex-color-regex@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/hex-color-regex/-/hex-color-regex-1.1.0.tgz#4c06fccb4602fe2602b3c93df82d7e7dbf1a8a8e"
+
+hey-listen@^1.0.4, hey-listen@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/hey-listen/-/hey-listen-1.0.5.tgz#6d0a3a2f60177f65bc4404d571a00025bf5dc20e"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"
@@ -5034,6 +5050,38 @@ pn@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/pn/-/pn-1.1.0.tgz#e2f4cef0e219f463c179ab37463e4e1ecdccbafb"
 
+pop@^0.0.33:
+  version "0.0.33"
+  resolved "https://registry.yarnpkg.com/pop/-/pop-0.0.33.tgz#cdd4a44cc49041bd8dbf5d2aae48c29e7a7dfdef"
+
+popmotion-pose@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/popmotion-pose/-/popmotion-pose-2.1.2.tgz#90aa81e70f254f136fbc7c502f9b95b01ac946a9"
+  dependencies:
+    popmotion "^8.3.3"
+    pose-core "^0.7.4"
+    style-value-types "^3.0.3"
+    tslib "^1.9.1"
+
+popmotion@^8.3.3:
+  version "8.3.3"
+  resolved "https://registry.yarnpkg.com/popmotion/-/popmotion-8.3.3.tgz#af87d4f260f323f0a47c36aea32a18b568640bb0"
+  dependencies:
+    framesync "^3.1.9"
+    hey-listen "^1.0.5"
+    style-value-types "^3.0.3"
+    stylefire "^2.0.6"
+    tslib "^1.9.1"
+
+pose-core@^0.7.4:
+  version "0.7.4"
+  resolved "https://registry.yarnpkg.com/pose-core/-/pose-core-0.7.4.tgz#21d64b6efe5eb7e0d1c2e7a111d0836ea00cdea5"
+  dependencies:
+    "@types/invariant" "^2.2.29"
+    "@types/node" "^10.0.5"
+    hey-listen "^1.0.5"
+    tslib "^1.9.1"
+
 posix-character-classes@^0.1.0:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/posix-character-classes/-/posix-character-classes-0.1.1.tgz#01eac0fe3b5af71a2a6c02feabb8c1fef7e00eab"
@@ -5720,6 +5768,14 @@ react-error-overlay@^4.0.0:
 react-is@^16.3.1:
   version "16.4.2"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.4.2.tgz#84891b56c2b6d9efdee577cc83501dfc5ecead88"
+
+react-pose@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/react-pose/-/react-pose-2.2.1.tgz#1565db1e94808591c3346c979d732b7f189097ee"
+  dependencies:
+    hey-listen "^1.0.5"
+    popmotion-pose "^2.1.2"
+    tslib "^1.9.1"
 
 react-scripts-parcel@0.0.24:
   version "0.0.24"
@@ -6492,6 +6548,10 @@ strip-json-comments@~2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
 
+style-value-types@^3.0.3:
+  version "3.0.5"
+  resolved "https://registry.yarnpkg.com/style-value-types/-/style-value-types-3.0.5.tgz#e7a7d35c4fc0768421ac12c70df1353f750a4468"
+
 styled-components@^3.4.2:
   version "3.4.2"
   resolved "https://registry.yarnpkg.com/styled-components/-/styled-components-3.4.2.tgz#8f518419932327e47fe9144824e3184b3e2da95d"
@@ -6505,6 +6565,15 @@ styled-components@^3.4.2:
     stylis "^3.5.0"
     stylis-rule-sheet "^0.0.10"
     supports-color "^3.2.3"
+
+stylefire@^2.0.6:
+  version "2.0.6"
+  resolved "https://registry.yarnpkg.com/stylefire/-/stylefire-2.0.6.tgz#aa35093b782e1d2ea746d9aac483f38366954e19"
+  dependencies:
+    framesync "^3.1.8"
+    hey-listen "^1.0.4"
+    style-value-types "^3.0.3"
+    tslib "^1.9.1"
 
 stylehacks@^4.0.0:
   version "4.0.0"
@@ -6725,6 +6794,10 @@ tr46@^1.0.1:
 trim-right@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/trim-right/-/trim-right-1.0.1.tgz#cb2e1203067e0c8de1f614094b9fe45704ea6003"
+
+tslib@^1.9.1:
+  version "1.9.3"
+  resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.9.3.tgz#d7e4dd79245d85428c4d7e4822a79917954ca286"
 
 tty-browserify@0.0.0:
   version "0.0.0"
