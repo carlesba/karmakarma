@@ -15,9 +15,9 @@ class App extends Component {
           onClick={this.commit(1)}
           color='#333'
         />
-        <div style={{height: '50vh', position: 'relative'}}>
+        <CountWrapper>
           <CountDisplay count={this.state.karma} />
-        </div>
+        </CountWrapper>
         <Button
           reverse
           onClick={this.commit(-1)}
@@ -51,16 +51,26 @@ const Title = styled.div`
   font-weight: bold;
   text-shadow: #cacaca 0.4vh 0px 0.2vh;
 `
+
 const Button = styled.div`
-  width: 0;
   height: 0;
-  border-left: 30vw solid #0000;
-  border-right: 30vw solid #0000;
-  border-bottom: 6vh solid ${p => p.color};
-  margin: 7vh auto 7vh;
+  margin: 0 auto 0;
+  padding: 10vh 20vw;
   transform: ${p => p.reverse ? 'rotate(180deg)' : ''};
   position: relative;
   z-index: 100;
+  &:before {
+    width: 0;
+    height: 0;
+    content: '';
+    border-left: 30vw solid #0000;
+    border-right: 30vw solid #0000;
+    border-bottom: 6vh solid ${p => p.color};
+  }
+`
+const CountWrapper = styled.div`
+  height: 60vh;
+  position: relative;
 `
 
 export default App

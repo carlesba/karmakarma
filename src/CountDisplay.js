@@ -11,8 +11,8 @@ const Display = pose.div({
 
 const StyledDisplay = styled(Display)`
   font-size: 33vh;
-  height: 55vh;
-  line-height: 50vh;
+  height: 60vh;
+  line-height: 60vh;
   text-align: center;
   user-select: none;
   position: absolute;
@@ -32,7 +32,10 @@ const StyledDisplay = styled(Display)`
     transform: rotateX(-90deg);
   }
 `
-Display.displayName = 'Display'
+StyledDisplay.displayName = 'Display'
+
+const DisplayCount = ({count, position}) =>
+  <StyledDisplay pose={position} className={position}>{parseCount(count)}</StyledDisplay>
 
 const parsePositives = number => `+${number}`
 
@@ -40,8 +43,8 @@ const parseCount = number => number > 0 ? parsePositives(number)
   : number === 0 ? ` ${number}` : number
 
 export default ({count}) =>
-<React.Fragment>
-  <StyledDisplay key={count - 1} className='above' pose='above'>{parseCount(count - 1)}</StyledDisplay>
-  <StyledDisplay key={count} className='current' pose='current'>{parseCount(count)}</StyledDisplay>
-  <StyledDisplay key={count + 1} className='bellow' pose='bellow'>{parseCount(count + 1)}</StyledDisplay>
-</React.Fragment>
+  <React.Fragment>
+    <DisplayCount key={count + 1} position='bellow' count={count+1} />
+    <DisplayCount key={count} position='current' count={count} />
+    <DisplayCount key={count - 1} position='above' count={count -1} />
+  </React.Fragment>
