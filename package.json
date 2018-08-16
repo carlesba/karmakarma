@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^1.2.0",
     "pop": "^0.0.33",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
@@ -13,6 +14,8 @@
   "scripts": {
     "start": "react-scripts-parcel start",
     "build": "react-scripts-parcel build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts-parcel test --env=jsdom",
     "eject": "react-scripts-parcel eject"
   },
@@ -29,6 +32,7 @@
       "not ie < 11"
     ]
   },
+  "homepage": "http://carlesba.github.io/karmakarma",
   "devDependencies": {
     "babel-plugin-module-resolver": "^3.1.1"
   }
