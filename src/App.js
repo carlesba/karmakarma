@@ -3,15 +3,22 @@ import CountDisplay from './CountDisplay'
 import styled from 'styled-components';
 
 class App extends Component {
-  state = { karma: 0 };
-  commit = value =>
-    () => this.setState(state => ({karma: state.karma + value}));
+  constructor (props) {
+    super(props)
+    const savedKarma = Number(localStorage.getItem('karma'))
+    this.state = {
+      karma: savedKarma || 0
+    }
+  }
+  commit = karma => this.setState({karma}, () => {
+      localStorage.setItem('karma', karma)
+  });
   render () {
     return (
       <Page>
         <Title>karmakarma</Title>
         <Button
-          onClick={this.commit(1)}
+          onClick={() => this.commit(this.state.karma + 1)}
           color='#333'
         />
         <CountWrapper>
@@ -19,7 +26,7 @@ class App extends Component {
         </CountWrapper>
         <Button
           reverse
-          onClick={this.commit(-1)}
+          onClick={() => this.commit(this.state.karma - 1)}
           color='#333'
         />
       </Page>
