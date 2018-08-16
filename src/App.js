@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './App.css'
 import CountDisplay from './CountDisplay'
 import styled from 'styled-components';
 
